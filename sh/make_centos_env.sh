@@ -42,6 +42,9 @@ cd msgpack-rpc-cpp
 make
 sudo make install
 
+echo "$SCRIPT_NAME Refreshing the cache of shared library.."
+sudo ldconfig
+
 echo "$SCRIPT_NAME making clean msgpack-rpc-cpp directory.."
 cd $TMP_DIR
 rm -rf msgpack-rpc-cpp
