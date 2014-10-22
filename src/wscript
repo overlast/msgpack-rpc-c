@@ -16,6 +16,6 @@ def build(bld):
         header = 'msgpack_rpc_client.h',
         target  = 'msgpack_rpc_client',
         install_path = bld.env.MSGPACK_RPC_C_DIR,
-        vnum = '0.5.2',
+        vnum = '0.3.1',
     )
     bld.install_files('/usr/local/include', ['msgpack_rpc_client.h'])

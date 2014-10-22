@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 
 APPNAME = 'msgpack-rpc-c'
-VERSION = '0.5.2'
+VERSION = '0.3.1'
 
 def options(opt):
   opt.load('compiler_cc')
