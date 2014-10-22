@@ -84,7 +84,7 @@ In this case, MessagePack RPC server is running on 127.0.0.1:9090.
   Copyright (C) 2014 Toshinori SATO <overlasting _attt_ gmail _dottt_ com>
 
   Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
+  You may not use this file except in compliance with the License.
   You may obtain a copy of the License at
 
     http://www.apache.org/licenses/LICENSE-2.0
