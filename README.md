@@ -67,13 +67,13 @@ msgpack-rpc-c/src/msgpack_rpc_client_clang.c is one of sample code.
       return 1;
     }
 
-### Compile client sample code
+### Compile a client sample code
 
     $ cd msgpack-rpc-c/src
     $ gcc -c ./msgpack_rpc_client_clang.c
     $ g++ -O3 -o c_test_client msgpack_rpc_client_clang.o -lmsgpack_rpc_client -lmsgpack-rpc -lmpio -lmsgpack
 
-### Execute client sample code
+### Execute a client sample code
 
      $ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./c_test_client
 
