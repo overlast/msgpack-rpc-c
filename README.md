@@ -3,6 +3,10 @@ MessagePack-RPC for C
 
 C wrapper of MessagePack-RPC for C++
 
+## Motive
+
+Call client methods of MessagePack-RPC for C++ from C application.
+
 ## Requirements
 
 Following programs are required to build:
@@ -14,7 +18,7 @@ Following programs are required to build:
 
 ## Restrictions
 
-This wrapper laid under restrictions.
+This wrapper laid under some restrictions.
 
 First, a prefix string of all methods name are mrc_.
 Because we can't use the namespaces in C.
@@ -77,7 +81,7 @@ msgpack-rpc-c/src/msgpack_rpc_client_clang.c is one of sample code.
 
 In this case, MessagePack RPC server is running on 127.0.0.1:9090.
 
-     $ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./c_test_client
+    $ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./c_test_client
 
 ## License
 
