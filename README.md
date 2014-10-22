@@ -15,6 +15,10 @@ Following programs are required to build:
 - [mpio](http://github.com/frsyuki/mpio) >= 0.3.5
 - [MessagePack-RPC for C++](https://github.com/msgpack-rpc/msgpack-rpc-cpp/) >= 0.3.1
 
+And following build tool is required to build:
+
+- waf >= 1.6.11
+
 ## Restrictions
 
 This wrapper laid under some restrictions.
