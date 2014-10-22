@@ -80,7 +80,7 @@ msgpack-rpc-c/src/msgpack_rpc_client_clang.c is one of sample code.
 
 ### Execute a client sample code
 
-In this case, MessagePack RPC server is running on 127.0.0.1:9090.
+In this case, you should run MessagePack RPC server on 127.0.0.1:9090.
 
     $ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./c_test_client
 
