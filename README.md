@@ -23,8 +23,8 @@ First, a prefix string of all methods name are mrc_.
 
 Because we can't use the namespaces in C.
 
-Therefore, messagepack::rpc::client->call() is call from mrc_call().
-And messagepack::rpc::client->notify() is call from mrc_notify().
+Therefore, messagepack::rpc::client->call() is called from mrc_call().
+And messagepack::rpc::client->notify() is called from mrc_notify().
 
 Second, types of all arguments of mrc_call() are limited to char*.
 And types of all arguments of mrc_notify() are limited to char* too.
