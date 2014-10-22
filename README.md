@@ -1,8 +1,7 @@
 MessagePack-RPC for C
 =======================
 
-C wrapper of MessagePack-RPC for C++
-
+C wrapper of MessagePack-RPC for C+
 ## Motive
 
 Call client methods of MessagePack-RPC for C++ from C application.
@@ -40,7 +39,7 @@ Finaly, an argument number after NAME_OF_METHOD is 0 to 16.
 
 ## Before installation
 
-You should install above shared libraries.
+You should install above shared libraries and waf(https://code.google.com/p/waf/).
 
 ### If you use CentOS 6.x
 
@@ -49,6 +48,8 @@ Configure and install in this way:
     $ ./sh/make_centos_env.sh
 
 ## Installation
+
+You should be able to build it on most systems with waf(https://code.google.com/p/waf/).
 
 Configure and install in this way:
 
