@@ -42,7 +42,7 @@ If you want to use the type expect the char*, you should formatted value(JSON, Y
 
     const char* mrc_call(char* NAME_OF_METHOD, char* JSON_FORMAT_VALUE);
 
-Finaly, an argument number after NAME_OF_METHOD is 0 to 16.
+Finaly, the number of arguments of methods(call(), notify()) after NAME_OF_METHOD is limited to value from 0 to 16.
 
 It is same as API of MessagePack-RPC for C++.
 
