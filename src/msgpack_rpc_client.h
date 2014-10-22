@@ -9,7 +9,6 @@ typedef void mrclient;
 #ifdef __cplusplus
 extern "C" {
 #endif
-
   mrclient*   mrc_create(char *, int);
   void        mrc_destroy(mrclient *);
   const char* mrc_call_(mrclient *, char *, ...);
