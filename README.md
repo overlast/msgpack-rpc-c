@@ -20,18 +20,27 @@ Following programs are required to build:
 This wrapper laid under some restrictions.
 
 First, a prefix string of all methods name are mrc_.
+
 Because we can't use the namespaces in C.
 
-Therefore, messagepack::rpc::client->call() is mrc_call().
-And messagepack::rpc::client->notify() is mrc_notify().
+Therefore, messagepack::rpc::client->call() is call from mrc_call().
+And messagepack::rpc::client->notify() is call from mrc_notify().
 
 Second, types of all arguments of mrc_call() are limited to char*.
 And types of all arguments of mrc_notify() are limited to char* too.
 
+Because type check of argument values is make complex the API of methods.
+
     const char* mrc_call(char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
     void mrc_notify(char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
 
+If you want to use the type expect the char*, you should formatted value(JSON, YAML...) as first argument.
+
+    const char* mrc_call(char* NAME_OF_METHOD, char* JSON_FORMAT_VALUE);
+
 Finaly, an argument number after NAME_OF_METHOD is 0 to 16.
+
+It is same as API of MessagePack-RPC for C++.
 
     OK : mrc_call(char* NAME_OF_METHOD);
     OK : mrc_call(char* NAME_OF_METHOD, char* argv1, ...,  char* argv16);
