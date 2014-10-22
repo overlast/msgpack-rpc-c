@@ -1,0 +1,73 @@
+# project msgpack-rpc-c (0.5.2) configured on Wed Oct 22 15:52:13 2014 by
+# waf 1.6.11 (abi 98, python 20606f0 on linux2)
+# using /usr/bin/waf configure
+#
+----------------------------------------
+Setting top to
+/home/overlast/git/msgpack-rpc-c
+----------------------------------------
+Setting out to
+/home/overlast/git/msgpack-rpc-c/build
+----------------------------------------
+Checking for 'c_bgxlc' (c compiler)
+find program=['bgxlc_r', 'bgxlc'] paths=['/home/overlast/.pyenv/shims', '/home/overlast/.pyenv/bin', '/usr/local/texlive/2012/bin/x86_64-darwin/', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/X11R6/bin', 'CLASSPATH'] var='CC' -> ''
+from /home/overlast/git/msgpack-rpc-c: Could not find the program bgxlc_r,bgxlc
+not found
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/home/overlast/.pyenv/shims', '/home/overlast/.pyenv/bin', '/usr/local/texlive/2012/bin/x86_64-darwin/', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/X11R6/bin', 'CLASSPATH'] var='CC' -> '/usr/bin/gcc'
+find program=['ar'] paths=['/home/overlast/.pyenv/shims', '/home/overlast/.pyenv/bin', '/usr/local/texlive/2012/bin/x86_64-darwin/', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/X11R6/bin', 'CLASSPATH'] var='AR' -> '/usr/bin/ar'
+/usr/bin/gcc
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/home/overlast/.pyenv/shims', '/home/overlast/.pyenv/bin', '/usr/local/texlive/2012/bin/x86_64-darwin/', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/X11R6/bin', 'CLASSPATH'] var='CXX' -> '/usr/bin/g++'
+(tool ar is already loaded, skipping)
+/usr/bin/g++
+----------------------------------------
+Checking for library msgpack-rpc
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_28a49a58008b243d029e9cf81d1f5f4a/test.cpp -> build/.conf_check_28a49a58008b243d029e9cf81d1f5f4a/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_28a49a58008b243d029e9cf81d1f5f4a/testbuild/test.cpp.1.o -> build/.conf_check_28a49a58008b243d029e9cf81d1f5f4a/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/overlast/git/msgpack-rpc-c/build/.conf_check_28a49a58008b243d029e9cf81d1f5f4a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lmsgpack-rpc']
+yes
+----------------------------------------
+Checking for library mpio
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0a7e42588f2aa3535d1a4a13d8187318/test.cpp -> build/.conf_check_0a7e42588f2aa3535d1a4a13d8187318/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_0a7e42588f2aa3535d1a4a13d8187318/testbuild/test.cpp.1.o -> build/.conf_check_0a7e42588f2aa3535d1a4a13d8187318/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/overlast/git/msgpack-rpc-c/build/.conf_check_0a7e42588f2aa3535d1a4a13d8187318/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lmpio']
+yes
+----------------------------------------
+Checking for library msgpack
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_b55aef892bd15d3c447e554068357b4d/test.cpp -> build/.conf_check_b55aef892bd15d3c447e554068357b4d/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_b55aef892bd15d3c447e554068357b4d/testbuild/test.cpp.1.o -> build/.conf_check_b55aef892bd15d3c447e554068357b4d/testbuild/testprog
+[0m
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/overlast/git/msgpack-rpc-c/build/.conf_check_b55aef892bd15d3c447e554068357b4d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lmsgpack']
+yes
