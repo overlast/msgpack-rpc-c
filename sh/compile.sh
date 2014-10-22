@@ -19,3 +19,5 @@ waf build
 
 echo "$SCRIPT_NAME trying to install.."
 sudo waf install
+
+echo "$SCRIPT_NAME Finish.."
