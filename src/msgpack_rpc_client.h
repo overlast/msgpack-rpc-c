@@ -1,5 +1,5 @@
-#ifndef __MSGPACK_RPC_CLIENT_C_WRAPPER_H
-#define __MSGPACK_RPC_CLIENT_C_WRAPPER_H
+#ifndef __MSGPACK_RPC_C_CLIENT_H
+#define __MSGPACK_RPC_C_CLIENT_H
 
 #define mrc_call(...) mrc_call_(__VA_ARGS__, (char *)0x0)
 #define mrc_notify(...) mrc_notify_(__VA_ARGS__, (char *)0x0)
