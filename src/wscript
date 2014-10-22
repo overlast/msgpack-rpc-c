@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
+def options(opt):
+    opt.load('compiler_c')
+
+def build(bld):
+    bld.stlib(
+        source = 'msgpack_rpc_client.cc',
+        header = 'msgpack_rpc_client.h',
+        target  = 'msgpack_rpc_client',
+        install_path = bld.env.MSGPACK_RPC_C_DIR,
+    )
+    bld.shlib(
+        source = 'msgpack_rpc_client.cc',
+        header = 'msgpack_rpc_client.h',
+        target  = 'msgpack_rpc_client',
+        install_path = bld.env.MSGPACK_RPC_C_DIR,
+        vnum = '0.5.2',
+    )
+    bld.install_files('/usr/local/include', ['msgpack_rpc_client.h'])
