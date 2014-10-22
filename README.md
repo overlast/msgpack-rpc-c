@@ -3,7 +3,16 @@ MessagePack-RPC for C
 
 C wrapper of MessagePack-RPC for C++
 
-## Purpose of implementation
+## Requirements
+
+Following programs are required to build:
+
+- gcc >= 4.1 with C++ support
+- [MessagePack for C++](http://msgpack.org/) >= 0.5.2
+- [mpio](http://github.com/frsyuki/mpio) >= 0.3.5
+- [MessagePack-RPC for C++](https://github.com/msgpack-rpc/msgpack-rpc-cpp/) >= 0.3.1
+
+## Restrictions
 
 This wrapper laid under restrictions.
 
@@ -25,15 +34,6 @@ Finaly, an argument number after NAME_OF_METHOD is 0 to 16.
     OK : mrc_call(char* NAME_OF_METHOD, char* argv1, ...,  char* argv16);
     NG : mrc_call(char* NAME_OF_METHOD, char* argv1, ...,  char* argv17);
 
-## Requirements
-
-Following programs are required to build:
-
-- gcc >= 4.1 with C++ support
-- [MessagePack for C++](http://msgpack.org/) >= 0.5.2
-- [mpio](http://github.com/frsyuki/mpio) >= 0.3.5
-- [MessagePack-RPC for C++](https://github.com/msgpack-rpc/msgpack-rpc-cpp/) >= 0.3.1
-
 ## Before installation
 
 You should install above shared libraries.
@@ -52,7 +52,7 @@ Configure and install in this way:
 
 ## Example
 
-### Sample code of client
+### Client Sample code
 
 msgpack-rpc-c/src/msgpack_rpc_client_clang.c is one of sample code.
 
@@ -67,13 +67,13 @@ msgpack-rpc-c/src/msgpack_rpc_client_clang.c is one of sample code.
       return 1;
     }
 
-### Compile sample code
+### Compile client sample code
 
     $ cd msgpack-rpc-c/src
     $ gcc -c ./msgpack_rpc_client_clang.c
     $ g++ -O3 -o c_test_client msgpack_rpc_client_clang.o -lmsgpack_rpc_client -lmsgpack-rpc -lmpio -lmsgpack
 
-### Execute sample code
+### Execute client sample code
 
      $ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./c_test_client
 
