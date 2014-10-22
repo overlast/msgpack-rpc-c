@@ -53,4 +53,7 @@ echo "$SCRIPT_NAME Making clean a build directory.."
 cd $BASEDIR
 rm -rf $TMP_DIR
 
+echo "$SCRIPT_NAME Trying to install waf.."
+sudo yum install -y waf
+
 echo "$SCRIPT_NAME Finish.."
