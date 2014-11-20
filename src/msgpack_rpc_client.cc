@@ -252,12 +252,11 @@ extern "C" {
     std::string nm = name;
     int i;
     va_list ap;
-
     char **params;
-    std::string result;
     std::string s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16;
     int p_num = 0;
     char* tmp;
+
     va_start(ap, name);
     tmp = (char*)va_arg(ap, char*);
     while (tmp != NULL) {
@@ -272,15 +271,11 @@ extern "C" {
       params[i] = (char*)va_arg(ap, char*);
     }
     va_end(ap);
-    std::cout << "domo" << std::endl;
-
     switch(p_num) {
       case 0:
         cpp_mrclient->notify(nm);
         break;
       case 1:
-        std::cout << "domo" << std::endl;
-
         s1 = params[0];
         cpp_mrclient->call(nm, s1);
         break;
