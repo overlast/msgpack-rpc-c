@@ -2,6 +2,7 @@ MessagePack-RPC for C
 =======================
 
 C wrapper of MessagePack-RPC for C+
+
 ## Motive
 
 Call client methods of MessagePack-RPC for C++ from C application.
@@ -35,20 +36,30 @@ And types of all arguments of mrc_notify() are limited to char* too.
 
 Because type check of argument values is make complex the API of methods.
 
-    const char* mrc_call(char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
-    void mrc_notify(char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
+    const char* mrc_call(mrclient* client, char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
+    void mrc_notify(mrclient* client, char* NAME_OF_METHOD, char* argv1, char* argv2, ....);
 
 If you want to use the type expect the char*, you should formatted value(JSON, YAML...) as first argument.
 
-    const char* mrc_call(char* NAME_OF_METHOD, char* JSON_FORMAT_VALUE);
+    const char* mrc_call(mrclient* client, char* NAME_OF_METHOD, char* JSON_FORMAT_VALUE);
 
 Finaly, the number of arguments of methods(call(), notify()) after NAME_OF_METHOD is limited to value from 0 to 16.
 
 It is same as API of MessagePack-RPC for C++.
 
-    OK : mrc_call(char* NAME_OF_METHOD);
-    OK : mrc_call(char* NAME_OF_METHOD, char* argv1, ...,  char* argv16);
-    NG : mrc_call(char* NAME_OF_METHOD, char* argv1, ...,  char* argv17);
+    OK : mrc_call(mrclient* client, char* NAME_OF_METHOD);
+    OK : mrc_call(mrclient* client, char* NAME_OF_METHOD, char* argv1, ...,  char* argv16);
+    NG : mrc_call(mrclient* client, char* NAME_OF_METHOD, char* argv1, ...,  char* argv17);
+
+When you call mrc_notify(), it's better to call mrc_flush_loop() after processing to call all mrc_notify() lines.
+
+mrc_flush_loop() flush implicitly the notify requests which are buffered in msgpack::rpc::loop.
+
+     mrc_notify(mrclient* client, char* NAME_OF_METHOD, ....);
+     mrc_notify(mrclient* client, char* NAME_OF_METHOD, ....);
+     ...
+     mrc_notify(mrclient* client, char* NAME_OF_METHOD, ....);
+     mrc_flush_loop(mrclient* client);
 
 ## Before installation
 
