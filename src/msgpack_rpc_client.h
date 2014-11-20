@@ -5,6 +5,7 @@
 #define mrc_notify(...) mrc_notify_(__VA_ARGS__, (char *)0x0)
 
 typedef void mrclient;
+typedef void mrloop;
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,6 +14,8 @@ extern "C" {
   void        mrc_destroy(mrclient *);
   const char* mrc_call_(mrclient *, char *, ...);
   void mrc_notify_(mrclient *, char *, ...);
+  void mrc_flush_loop(mrclient *);
+
 #ifdef __cplusplus
 }
 #endif
