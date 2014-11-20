@@ -11,7 +11,7 @@ echo "$SCRIPT_NAME trying to install msgpack-c.."
 git clone https://github.com/msgpack/msgpack-c.git
 cd msgpack-c
 ./bootstrap
-./configure
+./configure CXXFLAGS="-std=c++11"
 make
 sudo make install
 
