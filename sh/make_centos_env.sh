@@ -44,7 +44,7 @@ else
 
     echo "$SCRIPT_NAME making clean mpio directory.."
     cd $TMP_DIR
-#    rm -rf mpio
+    rm -rf mpio
 
     echo "$SCRIPT_NAME Refreshing the cache of shared library.."
     sudo ldconfig
