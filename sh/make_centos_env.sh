@@ -10,7 +10,7 @@ sudo pwd
 mkdir $TMP_DIR
 cd $TMP_DIR
 
-if [ -e /usr/local/lib/libmsgpack.so.4.0.0 ]; then
+if [ -e /usr/local/lib/libmsgpack.so.3.0.0 ] || [ -e /usr/local/lib/libmsgpack.so.4.0.0 ]; then
     echo "$SCRIPT_NAME msgpack-c is already installed.."
 else
     echo "$SCRIPT_NAME trying to install msgpack-c.."
@@ -36,6 +36,7 @@ else
     echo "$SCRIPT_NAME trying to install mpio.."
     git clone https://github.com/frsyuki/mpio.git
     cd mpio
+    sed  -i -e "s/ -rmpl / -r.\/mpl /g" ./preprocess
     ./bootstrap
     ./configure
     make
@@ -43,7 +44,7 @@ else
 
     echo "$SCRIPT_NAME making clean mpio directory.."
     cd $TMP_DIR
-    rm -rf mpio
+#    rm -rf mpio
 
     echo "$SCRIPT_NAME Refreshing the cache of shared library.."
     sudo ldconfig
@@ -69,7 +70,7 @@ else
 fi
 
 echo "$SCRIPT_NAME Making clean a build directory.."
-ncd $BASEDIR
+cd $BASEDIR
 rm -rf $TMP_DIR
 
 echo "$SCRIPT_NAME Trying to install waf.."
