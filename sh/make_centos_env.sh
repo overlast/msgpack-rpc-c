@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 BASEDIR=$(cd $(dirname $0);pwd)
-SCRIPT_NAME="[make_centos_env]"
+SCRIPT_NAME="[make_centos_env] :"
 TMP_DIR=/tmp/msgpack_rpc_c
+
+echo "$SCRIPT_NAME Get sudo password"
+sudo pwd
 
 mkdir $TMP_DIR
 cd $TMP_DIR
@@ -10,8 +13,9 @@ cd $TMP_DIR
 echo "$SCRIPT_NAME trying to install msgpack-c.."
 git clone https://github.com/msgpack/msgpack-c.git
 cd msgpack-c
+git checkout refs/tags/cpp-0.5.9
 ./bootstrap
-./configure CXXFLAGS="-std=c++11"
+./configure
 make
 sudo make install
 
